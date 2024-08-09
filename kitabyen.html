@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitabyen - Idara Ghufran</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-image: url('https://www.wallpaperflare.com/static/806/612/813/book-pages-sheets-diary-wallpaper.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: #333;
+        }
+
+        .overlay {
+            background: rgba(255, 255, 255, 0.8);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: rgba(51, 51, 51, 0.9);
+            padding: 1rem;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 15px;
+        }
+
+        .navbar a:hover {
+            color: #3498db;
+        }
+
+        .container {
+            margin-top: 70px; /* Space for fixed navbar */
+            padding: 20px;
+            text-align: center;
+        }
+
+        .option {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 400px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .option h2 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding: 10px;
+            text-align: center;
+            background-color: rgba(51, 51, 51, 0.9);
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="navbar">
+        <div>
+            <a href="home.html">ادارا غفران</a>
+            <a href="kitabyen.html">کتابیں</a>
+            <a href="research.html">علمی و تحقیقی رسائل</a>
+            <a href="tabligh.html">ماہنامہ التبلیغ</a>
+            <a href="fatwa.html">فتاوی</a>
+            <a href="contact.html">برائے رابطہ</a>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="option" onclick="goToPage('fiqh.html')">
+            <h2>Fiqh ki Kitabyen</h2>
+        </div>
+        <div class="option" onclick="goToPage('aqaid.html')">
+            <h2>Aqaid ki Kitabyen</h2>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2023 Idara Ghufran. All rights reserved.
+    </div>
+
+    <script>
+        function goToPage(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

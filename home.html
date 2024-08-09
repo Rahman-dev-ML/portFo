@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idara Ghufran - Home</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            background-color: #333;
+            padding: 1rem;
+            color: #fff;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 15px;
+        }
+
+        .navbar a:hover {
+            color: #3498db;
+        }
+
+        .quote {
+            padding: 10px;
+            background-color: #f8f8f8;
+            text-align: center;
+            font-size: 1.2rem;
+            color: #333;
+            margin-top: 60px; /* Adjusted to place below navbar */
+        }
+
+        .container {
+            margin-top: 0; /* Removed margin-top */
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: repeat(2, 50vh);
+            grid-gap: 10px;
+            padding: 10px;
+        }
+
+        .category {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
+        #category1 {
+            background-image: url('https://www.shutterstock.com/shutterstock/videos/17161528/thumb/1.jpg?ip=x480');
+        }
+
+        #category2 {
+            background-image: url('https://st2.depositphotos.com/3343629/10343/i/450/depositphotos_103438500-stock-photo-silhouette-of-man-praying-at.jpg');
+        }
+
+        #category3 {
+            background-image: url('https://islamonline.net/wp-content/uploads/2021/09/old-method-of-writing-.jpg');
+        }
+
+        #category4 {
+            background-image: url('https://c4.wallpaperflare.com/wallpaper/667/4/23/statue-sculpture-black-background-philosophy-black-background-hd-wallpaper-preview.jpg');
+        }
+        
+        .category:hover {
+            color: #3498db;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div>
+            <a href="kitabyen.html">کتابیں</a>
+            <a href="research.html">علمی و تحقیقی رسائل</a>
+            <a href="tabligh.html">ماہنامہ التبلیغ</a>
+            <a href="fatwa.html">فتاوی</a>
+            <a href="contact.html">برائے رابطہ</a>
+        </div>
+    </div>
+
+    <div class="quote">
+        رسول اللہ صلی اللہ علیہ وسلم نے فرمایا کہ لوگوں میں اللہ تعالیٰ کو سب سے زیادہ محبوب وہ شخص ہے کہ جس کے اخلاق سب سے اچھے ہوں (ابنِ حبان)
+    </div>
+
+    <div class="container">
+        <div class="category" id="category1" onclick="goToPage('kitabyen.html')">
+            کتابیں
+        </div>
+        <div class="category" id="category2" onclick="goToPage('research.html')">
+            علمی و تحقیقی رسائل
+        </div>
+        <div class="category" id="category3" onclick="goToPage('tabligh.html')">
+            ماہنامہ التبلیغ
+        </div>
+        <div class="category" id="category4" onclick="goToPage('fatwa.html')">
+            فتاوی
+        </div>
+    </div>
+
+    <script>
+        function goToPage(page) {
+            window.location.href = page;
+        }
+    </script>
+</body>
+</html>

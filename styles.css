@@ -1,0 +1,48 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+.animation-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.animation-text {
+    font-size: 3rem;
+    font-weight: bold;
+    opacity: 1;
+    position: relative;
+    z-index: 2;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1.5s ease;
+    z-index: 1;
+}
+
+#background1 {
+    background-image: url('https://images.unsplash.com/photo-1551095581-a8e5b4b28558?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1931&q=80');
+    opacity: 1;
+}
+
+#background2 {
+    background-image: url('https://images.unsplash.com/photo-1638271676156-f40fbfda17f0?ixlib=rb-4.0.3&ixid=M3xMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80');
+    opacity: 0;
+}
